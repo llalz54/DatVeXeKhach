@@ -50,10 +50,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 listener.setStatusGheXe(gheXe);
             }
         });
-        if(gheXe.isTrangThaiGhe()){
-            holder.statusGheXe.setColorFilter(Color.BLUE);
-        }else {
+        if(gheXe.isTrangThaiGhe() == 1){
             holder.statusGheXe.setColorFilter(Color.BLACK);
+        }else if(gheXe.isTrangThaiGhe() == 0){
+            holder.statusGheXe.setColorFilter(Color.DKGRAY);
+        }else {
+            holder.statusGheXe.setColorFilter(Color.GREEN);
         }
     }
 

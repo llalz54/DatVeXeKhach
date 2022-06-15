@@ -2,9 +2,9 @@ package com.example.datvexekhach;
 
 public class GheXe {
     private String maGhe;
-    private boolean trangThaiGhe;
+    private int trangThaiGhe;
 
-    public GheXe(String maGhe, boolean trangThaiGhe) {
+    public GheXe(String maGhe, int trangThaiGhe) {
         this.maGhe = maGhe;
         this.trangThaiGhe = trangThaiGhe;
     }
@@ -17,11 +17,11 @@ public class GheXe {
         this.maGhe = maGhe;
     }
 
-    public boolean isTrangThaiGhe() {
+    public int isTrangThaiGhe() {
         return trangThaiGhe;
     }
 
-    public void setTrangThaiGhe(boolean trangThaiGhe) {
+    public void setTrangThaiGhe(int trangThaiGhe) {
         this.trangThaiGhe = trangThaiGhe;
     }
 }

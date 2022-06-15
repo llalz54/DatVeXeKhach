@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,20 +47,28 @@ public class XeKhachThuongActivity extends AppCompatActivity{
     }
 
     private void setStatusTang1(GheXe gheXe) {
-        if(gheXe.isTrangThaiGhe()) {
-            gheXe.setTrangThaiGhe(false);
-        }else{
-            gheXe.setTrangThaiGhe(true);
+        if(gheXe.isTrangThaiGhe() == 0) {
+            gheXe.setTrangThaiGhe(2);
+        }else if (gheXe.isTrangThaiGhe() == 2) {
+            gheXe.setTrangThaiGhe(0);
+        }
+        else
+        {
+            Toast.makeText(this, "Ghế này chọn rồi", Toast.LENGTH_SHORT).show();
         }
         adapterTang1.setStatus(gheXe);
         adapterTang1.notifyDataSetChanged();
     }
 
     private void setStatusTang2(GheXe gheXe) {
-        if(gheXe.isTrangThaiGhe()) {
-            gheXe.setTrangThaiGhe(false);
-        }else{
-            gheXe.setTrangThaiGhe(true);
+        if(gheXe.isTrangThaiGhe() == 0) {
+            gheXe.setTrangThaiGhe(2);
+        }else if (gheXe.isTrangThaiGhe() == 2) {
+            gheXe.setTrangThaiGhe(0);
+        }
+        else
+        {
+            Toast.makeText(this, "Ghế này chọn rồi", Toast.LENGTH_SHORT).show();
         }
         adapterTang2.setStatus(gheXe);
         adapterTang2.notifyDataSetChanged();
@@ -67,37 +76,37 @@ public class XeKhachThuongActivity extends AppCompatActivity{
 
     private List<GheXe> initData() {
         List<GheXe> list = new ArrayList<>();
-        list.add(new GheXe("A1",false));
-        list.add(new GheXe("A2",false));
-        list.add(new GheXe("A3",false));
-        list.add(new GheXe("A4",false));
-        list.add(new GheXe("A5",false));
-        list.add(new GheXe("A6",false));
-        list.add(new GheXe("A7",false));
-        list.add(new GheXe("A8",false));
-        list.add(new GheXe("A9",false));
-        list.add(new GheXe("A10",false));
-        list.add(new GheXe("A11",false));
-        list.add(new GheXe("A12",false));
-        list.add(new GheXe("A13",false));
+        list.add(new GheXe("A1",0));
+        list.add(new GheXe("A2",0));
+        list.add(new GheXe("A3",0));
+        list.add(new GheXe("A4",0));
+        list.add(new GheXe("A5",0));
+        list.add(new GheXe("A6",0));
+        list.add(new GheXe("A7",0));
+        list.add(new GheXe("A8",0));
+        list.add(new GheXe("A9",0));
+        list.add(new GheXe("A10",0));
+        list.add(new GheXe("A11",0));
+        list.add(new GheXe("A12",0));
+        list.add(new GheXe("A13",0));
         return list;
     }
 
     private List<GheXe> initDataTang2() {
         List<GheXe> list = new ArrayList<>();
-        list.add(new GheXe("A1",false));
-        list.add(new GheXe("A2",false));
-        list.add(new GheXe("A3",false));
-        list.add(new GheXe("A4",false));
-        list.add(new GheXe("A5",false));
-        list.add(new GheXe("A6",false));
-        list.add(new GheXe("A7",false));
-        list.add(new GheXe("A8",false));
-        list.add(new GheXe("A9",false));
-        list.add(new GheXe("A10",false));
-        list.add(new GheXe("A11",false));
-        list.add(new GheXe("A12",false));
-        list.add(new GheXe("A13",false));
+        list.add(new GheXe("A1",0));
+        list.add(new GheXe("A2",0));
+        list.add(new GheXe("A3",0));
+        list.add(new GheXe("A4",0));
+        list.add(new GheXe("A5",0));
+        list.add(new GheXe("A6",0));
+        list.add(new GheXe("A7",0));
+        list.add(new GheXe("A8",0));
+        list.add(new GheXe("A9",0));
+        list.add(new GheXe("A10",0));
+        list.add(new GheXe("A11",0));
+        list.add(new GheXe("A12",0));
+        list.add(new GheXe("A13",0));
         return list;
     }
 
