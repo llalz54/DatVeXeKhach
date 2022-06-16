@@ -1,4 +1,4 @@
-package com.example.datvexekhach;
+package com.example.datvexekhach.models;
 
 public class GheXe {
     private String maGhe;
